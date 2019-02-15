@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Table</title>
+  <meta charset="utf-8">    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+      $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+</head>
+<body style="background-color:rgba(128,128,128,0.5);">
+  <div class="container">
+        <div class="text-center">
+          <input class="form-control" id="myInput" type="text" placeholder="Search..">    
+      <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="http://localhost/traning/try.html">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="http://localhost/traning/table.html">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+      <h2>Student Table</h2>
+  <div class="bs-example" id="parentdiv">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th align="center">Student Name</th>
+                <th align="center">Dept</th>
+                <th align="center">Phone Number</th>
+                <th align="center">Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody  id="myTable">
+            <tr>
+                <td id="s1">ancilin</td>
+                <td id="d1"> IT</td>
+                <td id="p1">9786544321</td>
+                <td id="e1">ancilin@gmail.com</td>
+                <td> <form>
+        
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-plus" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Add"></i></button>
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Edit"></i></button>  
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-trash" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Remove"></i></button> 
+                
+                </form>
+            </tr>
+            <tr>
+                <td id="s2">auna</td>
+                <td id="d2">IT</td>
+                <td id="p2">9786348932</td>
+                <td id="e2">auna@gmail.com</td>
+                <td><form>
+                 
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-plus" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Add"></i></button>
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Edit"></i></button>  
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-trash" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Remove"></i></button> 
+               
+                </form>
+                </td>
+            </tr>
+            <tr>
+                <td id="n3">thamari</td>
+                <td id="d3">IT</td>
+                <td id="p3">8786544327</td>
+                <td id="e3">thamari@gmail.com</td>
+                <td><form>
+                 
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-plus" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Add"></i></button>
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Edit"></i></button>  
+                <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-trash" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Remove"></i></button> 
+                
+                </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+   
+</div>
+
+<h4>Accordian</h4>
+  <div class="accordion" id="accordionExample">
+  <div class="card z-depth-0 bordered">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        Collapsible Group Item #1
+      </div>
+    </div>
+  </div>
+  <div class="card z-depth-0 bordered">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+       Collapsible Group Item #2
+      </div>
+    </div>
+  </div>
+  <div class="card z-depth-0 bordered">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+          aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Collapsible Group Item #3
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>
