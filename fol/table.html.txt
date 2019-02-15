@@ -44,7 +44,7 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th align="center">Student Name</th>
+                <th align="center">Students Name</th>
                 <th align="center">Dept</th>
                 <th align="center">Phone Number</th>
                 <th align="center">Email</th>
